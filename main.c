@@ -21,6 +21,8 @@
 //END	DATASTRUCTURES
 
 //BEGIN GLOBALS
+int ww=300;
+int wh=150;
 Mix_Music *Music 	= NULL;
 //END   GLOBALS
 
@@ -54,22 +56,24 @@ Texture = SDL_CreateTextureFromSurface( Renderer, tempSurface );
 
 int tw, th;
 SDL_QueryTexture(Texture, NULL, NULL, &tw, &th);
-
-SDL_FreeSurface( tempSurface );
-
-SDL_Point mouse_coords;
-SDL_Rect  dst_rect_play_pause 	= {(540/2)-(tw/5/2), (540/3)-(th/5/2), tw/5,th/5};
-SDL_Rect  dst_rect_halt 	= {(540/2)-(tw/5/2), (540/3)*2-(th/5/2), tw/5,th/5};
-
 SDL_Rect src_rect_play 		= {    0, 0   , tw/2,  th/2};
 SDL_Rect src_rect_pause		= {    0, th/2, tw/2,  th/2};
 
 SDL_Rect src_rect_halt		= { tw/2, 0   , tw/2,  th/2};
 SDL_Rect src_rect;
 src_rect=src_rect_play;
+th*=.1;
+tw*=.1;
+SDL_FreeSurface( tempSurface );
+
+SDL_Point mouse_coords;
+SDL_Rect  dst_rect_play_pause 	= {(50), (wh/2)-(th/2), tw,th};
+SDL_Rect  dst_rect_halt 	= {(ww-tw)-50,(wh/2)-(th/2),tw,th};
+
+
 
 SDL_SetWindowPosition(Window,0,0);
-SDL_SetWindowSize(Window,540,540);
+SDL_SetWindowSize(Window,ww,wh);
 SDL_SetWindowTitle(Window, "SDL 2 - Play music");
 SDL_ShowWindow(Window);
 SDL_Event event;
