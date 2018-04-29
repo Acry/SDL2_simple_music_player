@@ -27,6 +27,7 @@ Mix_Music *Music 	= NULL;
 //END   GLOBALS
 
 //BEGIN FUNCTION PROTOTYPES
+SDL_bool PointInCircle(SDL_Point *, SDL_Rect *);
 //END	FUNCTION PROTOTYPES
 
 /* DEFINED PROGRESS GOALS
@@ -89,7 +90,7 @@ while(running){
 			running = 0;
 		}
 		if(event.type == SDL_MOUSEBUTTONDOWN){
-			if(event.button.button == SDL_BUTTON_LEFT && SDL_PointInRect(&mouse_coords,&dst_rect_play_pause)){
+			if(event.button.button == SDL_BUTTON_LEFT && PointInCircle(&mouse_coords,&dst_rect_play_pause)){
 				if(!Mix_PlayingMusic()){
 					Mix_PlayMusic(Music, -1);
 					src_rect=src_rect_pause;
@@ -106,7 +107,7 @@ while(running){
 				}
 			}
 			
-			if(event.button.button == SDL_BUTTON_LEFT && SDL_PointInRect(&mouse_coords,&dst_rect_halt)){
+			if(event.button.button == SDL_BUTTON_LEFT && PointInCircle(&mouse_coords,&dst_rect_halt)){
 					Mix_HaltMusic();
 				src_rect=src_rect_play;
 			}
@@ -169,4 +170,19 @@ return EXIT_SUCCESS;
 //END   MAIN FUNCTION
 
 //BEGIN FUNCTIONS
+SDL_bool PointInCircle(SDL_Point *point, SDL_Rect *square)
+{
+	float x=square->x+square->w/2;
+	float y=square->y+square->h/2;;
+	float r=square->h/2;
+	
+	float dx=x-point->x;
+	float dy=y-point->y;
+	
+	float distance=sqrtf(dx * dx + dy * dy);
+	
+	if (distance < r + 1)
+		return SDL_TRUE;
+	return SDL_FALSE;
+}
 //END   FUNCTIONS
