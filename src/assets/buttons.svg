@@ -11,7 +11,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg9553"
-   sodipodi:docname="akiross-Audio-Button-Set.svg"
+   sodipodi:docname="buttons.svg"
    viewBox="0 0 170.66799 50.309186"
    sodipodi:version="0.32"
    version="1.0"
@@ -257,7 +257,7 @@
      objecttolerance="10"
      borderopacity="1.0"
      inkscape:current-layer="layer1"
-     inkscape:cx="120.15574"
+     inkscape:cx="120.50929"
      inkscape:cy="2.7098621"
      inkscape:window-y="0"
      inkscape:window-x="0"
@@ -282,7 +282,10 @@
     <g
        id="Play"
        inkscape:label="Play"
-       transform="matrix(0.67755,0,0,0.6764,-326.29274,297.28106)">
+       transform="matrix(0.67755,0,0,0.6764,-326.29274,297.28106)"
+       inkscape:export-filename="/home/carsten/projects/SDL2/simple_music_player/assets/gfx/buttons.png"
+       inkscape:export-xdpi="95.809998"
+       inkscape:export-ydpi="95.809998">
       <path
          id="path9472"
          sodipodi:rx="35.708893"
@@ -326,10 +329,10 @@
     </g>
     <g
        id="Stop"
-       inkscape:export-ydpi="77.809998"
-       inkscape:export-filename="/home/akiross/University/ium/progetto/main.png"
+       inkscape:export-ydpi="95.809998"
+       inkscape:export-filename="/home/carsten/projects/SDL2/simple_music_player/assets/gfx/buttons.png"
        transform="matrix(1.4668,0,0,1.4668,-475.17236,64.163372)"
-       inkscape:export-xdpi="77.809998"
+       inkscape:export-xdpi="95.809998"
        inkscape:label="Stop">
       <circle
          id="path9492"
@@ -370,7 +373,10 @@
     <g
        id="Pause"
        inkscape:label="Pause"
-       transform="matrix(1.1268,0,0,1.1287,-728.48493,398.44458)">
+       transform="matrix(1.1268,0,0,1.1287,-728.48493,398.44458)"
+       inkscape:export-filename="/home/carsten/projects/SDL2/simple_music_player/assets/gfx/buttons.png"
+       inkscape:export-xdpi="95.809998"
+       inkscape:export-ydpi="95.809998">
       <path
          id="path30495"
          sodipodi:rx="35.708893"

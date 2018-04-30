@@ -5,7 +5,7 @@ LDFLAGS  = `sdl2-config --libs` -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lm
 .SUFFIXES: .c .o
 
 srcdir	 =src/
-TARGETS	 = player_01 ##player_02
+TARGETS	 = player_01 player_02
 
 .PHONY: all
 all: $(TARGETS)
