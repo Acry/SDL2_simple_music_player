@@ -1,0 +1,7 @@
+#https://docs.travis-ci.com/user/languages/c/#Default-Test-Script
+#.travis.yml
+language: C
+script: make
+compiler:
+  - clang
+  - gcc
