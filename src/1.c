@@ -147,7 +147,7 @@ while(running){
 
 //BEGIN RENDERING
 SDL_Delay(66);//~15fps
-SDL_SetRenderDrawColor(Renderer, 111, 111, 111, 255);
+SDL_SetRenderDrawColor(Renderer, 46, 52, 54, 255);
 SDL_RenderClear(Renderer);
 SDL_RenderCopy(Renderer, Texture, &src_rect, &dst_rect_play_pause);
 SDL_RenderCopy(Renderer, Texture, &src_rect_halt, &dst_rect_halt);
