@@ -1,4 +1,4 @@
-SDL2_simple_music_player:  
+SDL2_simple_music_player:  [![Build Status](https://travis-ci.org/Acry/SDL2_simple_music_player.svg?branch=master)](https://travis-ci.org/Acry/SDL2_simple_music_player)  
 Help on [Question](https://discourse.libsdl.org/t/how-to-load-audio-and-make-a-button/24223/1) on [SDL-Discourse](https://discourse.libsdl.org).  
 Plays mp3-music  
 
