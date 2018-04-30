@@ -7,13 +7,14 @@ Left mouse button on button / or space switches play and pause.
 Left mouse button on hold button or
 backspace stops music (rewind to start).
 
-![Screenshot](./screenshot.jpg)  
+![Screenshot](./screenshot.png)  
 
 Help on [Question](https://discourse.libsdl.org/t/how-to-load-audio-and-make-a-button/24223/1)
 on [SDL-Discourse](https://discourse.libsdl.org).
 
-Asset Info:
-Music Title is "Wish You Were Here"
-from THE.MADPIX.PROJECT
+Asset Info:  
+Music Title is "Wish You Were Here"  
+from THE.MADPIX.PROJECT  
+[Link](https://licensing.jamendo.com/de/track/1214935/wish-you-were-here)  
+[Buttons](https://openclipart.org/detail/11572/audio-button-set)
 
-[Link](https://licensing.jamendo.com/de/track/1214935/wish-you-were-here)

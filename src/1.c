@@ -47,35 +47,32 @@ int main(int argc, char *argv[])
 //BEGIN INIT
 init();
 Mix_OpenAudio( 44100, MIX_DEFAULT_FORMAT, 2, 2048 );
-Music=Mix_LoadMUS("./The.madpix.project_-_Wish_You_Were_Here.mp3");
+Music=Mix_LoadMUS("assets/snd/The.madpix.project_-_Wish_You_Were_Here.mp3");
 
 SDL_Surface *tempSurface = NULL;
-tempSurface=IMG_Load("buttons.png");
+tempSurface=IMG_Load("assets/gfx/buttons.png");
 
 SDL_Texture *Texture	 = NULL;
 Texture = SDL_CreateTextureFromSurface( Renderer, tempSurface );
+// int w,h;
+// SDL_QueryTexture(Texture, NULL, NULL, &w, &h);
+// SDL_Log("w: %d h: %d", w,h);
+SDL_Rect src_rect_pause		= {  0,  0, 50,  50};
+SDL_Rect src_rect_halt		= { 60,  0, 50,  50};
+SDL_Rect src_rect_play 		= {120,  0, 50,  50};
 
-int tw, th;
-SDL_QueryTexture(Texture, NULL, NULL, &tw, &th);
-SDL_Rect src_rect_play 		= {    0, 0   , tw/2,  th/2};
-SDL_Rect src_rect_pause		= {    0, th/2, tw/2,  th/2};
-
-SDL_Rect src_rect_halt		= { tw/2, 0   , tw/2,  th/2};
 SDL_Rect src_rect;
 src_rect=src_rect_play;
-th*=.1;
-tw*=.1;
-SDL_FreeSurface( tempSurface );
+
+SDL_FreeSurface(tempSurface);
 
 SDL_Point mouse_coords;
-SDL_Rect  dst_rect_play_pause 	= {(50), (wh/2)-(th/2), tw,th};
-SDL_Rect  dst_rect_halt 	= {(ww-tw)-50,(wh/2)-(th/2),tw,th};
-
-
+SDL_Rect  dst_rect_play_pause 	= {50,  20, 50,50};
+SDL_Rect  dst_rect_halt 	= {50,  80, 50,50};
 
 SDL_SetWindowPosition(Window,0,0);
 SDL_SetWindowSize(Window,ww,wh);
-SDL_SetWindowTitle(Window, "SDL 2 - Play music");
+SDL_SetWindowTitle(Window, "Simple Music Player");
 SDL_ShowWindow(Window);
 SDL_Event event;
 int running = 1;
