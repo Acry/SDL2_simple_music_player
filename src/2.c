@@ -46,6 +46,7 @@ SDL_Rect  	dst_rect_play_pause;
 SDL_Rect  	dst_rect_halt;
 
 SDL_Rect 	src_rect;
+
 SDL_Texture    *button		= NULL;
 SDL_Rect 	button_dst;
 
